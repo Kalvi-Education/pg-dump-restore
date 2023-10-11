@@ -31,11 +31,11 @@
   "author": "Pavlo Petryk",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redwert/pg-dump-restore/issues"
+    "url": "https://github.com/Kalvi-Education/pg-dump-restore/issues"
   },
-  "homepage": "https://github.com/redwert/pg-dump-restore#readme",
+  "homepage": "https://github.com/Kalvi-Education/pg-dump-restore#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "execa": "^5.1.1"
