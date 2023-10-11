@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redwert/pg-dump-restore.git"
+    "url": "git+https://github.com/Kalvi-Education/pg-dump-restore.git"
   },
   "keywords": [
     "pg",
