@@ -1,5 +1,5 @@
 {
-  "name": "pg-dump-restore",
+  "name": "@kalvi-education/pg-dump-restore",
   "version": "1.0.6",
   "description": "Nodejs wrapper around the pg_dump and pg_restore",
   "main": "lib/index.js",
