@@ -19,8 +19,7 @@
     "_clean": "rimraf lib/"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kalvi-Education/pg-dump-restore.git"
+    "url": "git@github.com:Kalvi-Education/pg-dump-restore.git"
   },
   "keywords": [
     "pg",
