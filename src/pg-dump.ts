@@ -15,7 +15,7 @@ export type DumpOptionsType = {
   jobs?: number
   schemaPattern?: string
   excludeSchemaPattern?: string
-  tablePattern?: string
+  tablePattern?: string | []
   excludeTablePattern?: string
   excludeTableDataPattern?: string
   noOwner?: boolean
@@ -125,7 +125,6 @@ export const pgDump = async (
   if (jobs) args.push(`--jobs=${jobs}`)
   if (schemaPattern) args.push(`--schema=${schemaPattern}`)
   if (excludeSchemaPattern) args.push(`--exclude-schema=${excludeSchemaPattern}`)
-  if (tablePattern) args.push(`--table=${tablePattern}`)
   if (excludeTablePattern) args.push(`--exclude-table=${excludeTablePattern}`)
   if (compress !== undefined) args.push(`--compress=${compress}`)
   if (excludeTableDataPattern) args.push(`--exclude-table-data=${excludeTableDataPattern}`)
@@ -136,6 +135,14 @@ export const pgDump = async (
   if (sectionName) args.push(`--section=${sectionName}`)
   if (snapshotName) args.push(`--snapshot=${snapshotName}`)
   if (roleName) args.push(`--role=${roleName}`)
+
+  if (Array.isArray(tablePattern)) {
+    for (const table of tablePattern) {
+      if (table) args.push(`--table=${table}`)
+    }
+  } else {
+    if (tablePattern) args.push(`--table=${tablePattern}`)
+  }
 
   const paramsMap: { [key: string]: boolean | undefined } = {
     blobs,
